@@ -56,4 +56,25 @@ public class Solution {
         int[] result = {secondLargest, secondSmallest};
         return result;
     }
-  }
+    }
+
+
+find duplicates element in an sorted array
+===========================================
+
+
+public class Solution {
+	public static int removeDuplicates(ArrayList<Integer> arr,int n) {
+		
+		int i=0;
+		for(int j=1;j<n;j++)
+		{
+			if(!arr.get(j).equals(arr.get(i)))
+			{
+               arr.set(i+1, arr.get(j));
+			   i++;
+			}
+		}
+		return (i+1);
+	}
+     }
