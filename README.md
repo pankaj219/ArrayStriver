@@ -101,5 +101,29 @@ public class Solution {
     }
      }
 
+Move all zeros to the end without disturbing order of non zero element 
+======================================================================
 
-     
+public static int[] moveZeros(int n, int []a) {
+        
+        int j=-1;
+        for(int i=0;i<n;i++)
+        {
+            if(a[i]==0)
+            {
+                j=i;
+                break;
+            }
+        }
+        for(int i=j+1;i<n;i++)
+        {
+            if(a[i]!=0)
+            {
+                int temp=a[i];
+                a[i]=a[j];
+                a[j]=temp;
+            }
+        }
+        return a;
+    }
+   }
